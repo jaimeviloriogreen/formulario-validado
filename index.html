@@ -10,30 +10,34 @@
 </head>
 <body>
     <main class="container">
-        <h2>Contact Form</h2>
-        <p>Let us know your questions, suggestions and concerns by filling out the contact form below</p>
-        <form name="mainForm" class="form" autocomplete="off">
-            <fieldset>
-                <label for="fname">Full Name</label>
-                <input type="text" placeholder="First Name" name="fname">
-                <input type="text" placeholder="Last Name" name="lname">
-            </fieldset>
-            <fieldset>
-                <label for="email">Your Email</label>
+
+        <section class="section_form">
+            <header class="section_form__header">
+                <h2 class="section_form__header__title">Contact Form</h2>
+                <p class="section_form__header__text">Let us know your questions, suggestions and concerns by filling out the contact form below</p>
+            </header>
+
+            <form name="mainForm" class="form" autocomplete="off">
+                
+                <label class="form__label">Full Name</label>
+                <div class="form__fieldset">
+                    <input class="form__fieldset__fname" type="text" placeholder="First Name" name="fname" autofocus>
+                    <input class="form__fieldset__lname" type="text" placeholder="Last Name" name="lname">
+                </div>
+
+                <label class="form__label">Your Email</label>
                 <input type="text" placeholder="yourname@domain.com" name="email">
-            </fieldset>
-            <fieldset>
-                <label for="phone">Phone Number</label>
+
+                <label class="form__label">Phone Number</label>
                 <input type="text" placeholder="(000) 000-0000" name="phone">
-                <label for="id">ID Number</label>
-                <input type="text" placeholder="000-0000000-0" name="id">
-            </fieldset>
-            <fieldset>
-                <label for="message">Message</label>
-                <textarea name="message" placeholder="Your message here"></textarea>
-            </fieldset>
-            <input type="submit" value="Submit Form" name="submit">
-        </form>
+
+                <label class="form__label">Message</label>
+                <textarea class="form__textarea" name="message" placeholder="Your message here"></textarea>
+                
+
+                <input class="form__submit" type="submit" value="Submit Form" name="submit">
+            </form>
+        </section>
     </main>
 
         <!-- Scripts -->
