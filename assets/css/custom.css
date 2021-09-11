@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=RocknRoll+One&family=Urbanist:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+:root{
+    --color1: #ffffff;
+    --color2: #000000;
+    --color3: #dfdfdf;
+    --color4: #db514d;
+    --color5: #2b90d9;
+    --color6: #004e66;
+    --color7: #e97f02;
+    --color8: #3b8686;
+    --color9: #6a60a9;
+    --color10:#CB3631;
+    --color11:#535e66;
+    --color12:#343e46; 
+    --fuente1: 'Urbanist', sans-serif;
+    --fuente2: 'Raleway', sans-serif;
+    --fuente3: 'RocknRoll One', sans-serif;
+}
+*,
+*::after,
+*::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 16px;
+    font-family:var(--fuente1);
+    font-weight: 200;
+}
+body{
+    background-color: var(--color3);
+}
+.container{
+    width: 90%;
+    max-width: 62.5rem;
+    margin: 3.125rem auto;
+}
