@@ -77,8 +77,9 @@ body{
     font-size: .9rem;
     letter-spacing: var(--letter-spacing);
 }
-form[name="mainForm"] input[type="text"], 
-form[name="mainForm"] textarea{
+.form__input_text, 
+.form__input_textarea{
+    width: 100%;
     border: none;
     outline: none;
     font-family: inherit;
@@ -88,16 +89,16 @@ form[name="mainForm"] textarea{
     font-weight: 400;
     font-size: 1rem;
 }
-form[name="mainForm"] input[type="text"]::placeholder, 
-form[name="mainForm"] textarea::placeholder{
+.form__input_text::placeholder, 
+.form__input_textarea::placeholder{
     font-family: var(--fuente1);
     font-size: .9rem;
     letter-spacing: var(--letter-spacing);
     font-weight: 300;
     color: rgb(36, 35, 35);
 }
-form[name="mainForm"] input[type="text"]:focus, 
-form[name="mainForm"] textarea:focus{
+.form__input_text:focus, 
+.form__input_textarea:focus{
     outline: 2px solid #0585ac;
     border: 1px solid transparent;
 }
@@ -108,15 +109,13 @@ form[name="mainForm"] textarea:focus{
     justify-content: space-between;
     flex-flow: row nowrap;
 }
-.form__fieldset__fname{
-    width: 100%;
-    flex: 0 1 calc(50% - .5rem);
+.form__fname_fieldset{width: 100%; flex: 0 1 calc(50% - .5rem);}
+.form__lname_fieldset{width: 100%;flex: 0 1 calc(50% -  .5rem);
 }
-.form__fieldset__lname{
-    width: 100%;
-    flex: 0 1 calc(50% -  .5rem);
-}
-.form__textarea{
+
+.form__email, .form__phone{width: 100%;}
+
+.form__input_textarea{
     resize: vertical;
     min-height: 6rem;
     max-height: 6rem;

@@ -20,19 +20,32 @@
             <form name="mainForm" class="form" autocomplete="off">
                 
                 <label class="form__label">Full Name</label>
+                
                 <div class="form__fieldset">
-                    <input class="form__fieldset__fname" type="text" placeholder="First Name" name="fname" autofocus>
-                    <input class="form__fieldset__lname" type="text" placeholder="Last Name" name="lname">
+                    <div class="form__fname_fieldset">
+                        <input class="form__input_fname form__input_text" type="text" placeholder="First Name" name="fname" autofocus>
+                    </div>
+
+                    <div class="form__lname_fieldset">
+                        <input class="form__input_lname form__input_text" type="text" placeholder="Last Name" name="lname">
+                    </div>
+
                 </div>
 
                 <label class="form__label">Your Email</label>
-                <input type="text" placeholder="yourname@domain.com" name="email">
+                <div class="form__email">
+                    <input class="form__input_email form__input_text" type="text" placeholder="yourname@domain.com" name="email">
+                </div>
 
                 <label class="form__label">Phone Number</label>
-                <input type="text" placeholder="(000) 000-0000" name="phone">
+                <div class="form__phone">
+                    <input class="form__input_phone form__input_text" type="text" placeholder="(000) 000-0000" name="phone">
+                </div>
 
                 <label class="form__label">Message</label>
-                <textarea class="form__textarea" name="message" placeholder="Your message here"></textarea>
+                <div class="form__message">
+                    <textarea class="form__input_textarea" name="message" placeholder="Your message here"></textarea>
+                </div>
                 
 
                 <input class="form__submit" type="submit" value="Submit Form" name="submit">
