@@ -109,8 +109,8 @@ body{
     justify-content: space-between;
     flex-flow: row nowrap;
 }
-.form__fname_fieldset{width: 100%; flex: 0 1 calc(50% - .5rem);}
-.form__lname_fieldset{width: 100%;flex: 0 1 calc(50% -  .5rem);
+.form__fname_field{width: 100%; flex: 0 1 calc(50% - .5rem);}
+.form__lname_field{width: 100%;flex: 0 1 calc(50% -  .5rem);
 }
 
 .form__email, .form__phone{width: 100%;}
