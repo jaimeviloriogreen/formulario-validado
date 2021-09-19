@@ -12,6 +12,10 @@
     --color10:#CB3631;
     --color11:#535e66;
     --color12:#343e46; 
+    --color13:#bb2929; 
+    --color14:#1ed12d;
+    --color15:#119200; 
+    --color16:#0075ff;  
 
     --fuente1: 'Urbanist', sans-serif;
     --fuente2: 'Raleway', sans-serif;
@@ -85,7 +89,7 @@ body{
     font-family: inherit;
     letter-spacing: var(--letter-spacing);
     border: 1px solid rgba(205, 205, 205, 0.726);
-    padding: .5rem 1rem;
+    padding: .5rem 1.5rem .5rem 1rem;
     font-weight: 400;
     font-size: 1rem;
 }
@@ -109,11 +113,32 @@ body{
     justify-content: space-between;
     flex-flow: row nowrap;
 }
-.form__fname_field{width: 100%; flex: 0 1 calc(50% - .5rem);}
-.form__lname_field{width: 100%;flex: 0 1 calc(50% -  .5rem);
+.form__fname_field{width: 100%; flex: 0 1 calc(50% - .25rem); position: relative;}
+.form__lname_field{width: 100%;flex: 0 1 calc(50% -  .25rem); position: relative;}
+
+.form__email, 
+.form__phone, 
+.form__message{width: 100%; position: relative;}
+
+.form__icon_exito_fname{display: none;}
+.form__icon_error_fname{display: none;}
+.form__icon_exito_lname{display: none;}
+.form__icon_error_lname{display: none;}
+.form__icon_exito_email{display: none;}
+.form__icon_error_email{display: none;}
+.form__icon_exito_phone{display: none;}
+.form__icon_error_phone{display: none;}
+.form__icon_exito_message{display: none;}
+.form__icon_error_message{display: none;}
+
+.form__icon{
+    width: 1.25rem;
+    position: absolute;
+    right: .25rem;
+    bottom: .55rem;
 }
 
-.form__email, .form__phone{width: 100%;}
+.form__icon_exito_message, .form__icon_error_message{bottom: 4rem;}
 
 .form__input_textarea{
     resize: vertical;
@@ -144,5 +169,45 @@ body{
 @media screen and (max-width:768px){
     html{
         font-size: 14px;
+    }
+    .form{
+        grid-template-rows: repeat(9, auto);
+        gap: .5rem;
+    }
+    .form__label_fname{
+        grid-row: 1/2;
+        grid-column: 1/-1;
+    }
+    .form__fieldset{
+        grid-row: 2/3;
+        grid-column: 1/-1;
+    }
+    .form__label_email{
+        grid-column: 1/-1;
+        grid-row: 3/4;
+    }
+    .form__email{
+        grid-column: 1/-1;
+        grid-row: 4/5;
+    }
+    .form__label_phone{
+        grid-column: 1/-1;
+        grid-row: 5/6;
+    }
+    .form__phone{
+        grid-column: 1/-1;
+        grid-row: 6/7;
+    }
+    .form__label_message{
+        grid-column: 1/-1;
+        grid-row: 7/8;
+    }
+    .form__message{
+        grid-row: 8/9;
+        grid-column: 1/-1;
+    }
+    .form__submit{
+        grid-row: 9/-1;
+        grid-column: 1/-1;
     }
 }
