@@ -10,12 +10,13 @@
     --color8: #3b8686;
     --color9: #6a60a9;
     --color10:#CB3631;
-    --color11:#535e66;
+    --color11:#71787e;
     --color12:#343e46; 
     --color13:#bb2929; 
     --color14:#1ed12d;
     --color15:#119200; 
-    --color16:#0075ff;  
+    --color16:#0075ff;
+    --color17:rgba(83, 93, 101, 0.514);  
 
     --fuente1: 'Urbanist', sans-serif;
     --fuente2: 'Raleway', sans-serif;
@@ -103,7 +104,7 @@ body{
 }
 .form__input_text:focus, 
 .form__input_textarea:focus{
-    outline: 2px solid #0585ac;
+    outline: 2px solid var(--color17);
     border: 1px solid transparent;
 }
 .form__fieldset{
@@ -120,16 +121,19 @@ body{
 .form__phone, 
 .form__message{width: 100%; position: relative;}
 
-.form__icon_exito_fname{display: none;}
+.form__icon_success_fname{display: none;}
 .form__icon_error_fname{display: none;}
-.form__icon_exito_lname{display: none;}
+.form__icon_success_lname{display: none;}
 .form__icon_error_lname{display: none;}
-.form__icon_exito_email{display: none;}
+.form__icon_success_email{display: none;}
 .form__icon_error_email{display: none;}
-.form__icon_exito_phone{display: none;}
+.form__icon_success_phone{display: none;}
 .form__icon_error_phone{display: none;}
-.form__icon_exito_message{display: none;}
+.form__icon_success_message{display: none;}
 .form__icon_error_message{display: none;}
+
+.success{outline: 2px solid rgba(0, 117, 255); border: 1px solid transparent;}
+.error{outline: 2px solid rgba(187, 41, 41);border: 1px solid transparent;}
 
 .form__icon{
     width: 1.25rem;
@@ -161,8 +165,12 @@ body{
     color: var(--color1);
     cursor: pointer;
     transition: background-color .3s ease;
+    cursor:not-allowed;
 }
-.form__submit:hover{
+.form__submit-disabled{
+    background-color: var(--color11);
+}
+.form__submit-hover:hover{
     background-color: #024255;
 }
 
