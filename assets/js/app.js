@@ -1,7 +1,6 @@
 import { form, fname, lname, email, phone, message, btnSubmit } from "./modules/dom.js";
 import { Form } from "./modules/form.js";
 import { Render } from "./modules/reder.js";
-import { Validate } from "./modules/validate.js";
 
 main();
 
@@ -10,13 +9,11 @@ function main(){
     form.addEventListener("submit", getDataForm);
    
     // Instances
-    const render = new Render(btnSubmit, fname);
+    const render = new Render(form, btnSubmit, fname);
     render.btnDisabled = true;
     render.btnSubmitHover();
-
-    
-    const validate = new Validate();
-    validate.namesInputs(form);
+    render.namesInputsValidate();
+    render.emailInputValidate();
 
 }
 

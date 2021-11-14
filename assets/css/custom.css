@@ -32,7 +32,7 @@
     box-sizing: border-box;
 }
 html{
-    font-size: 16px;
+    font-size: 18px;
     font-family:var(--fuente1);
     font-weight: 200;
 }
