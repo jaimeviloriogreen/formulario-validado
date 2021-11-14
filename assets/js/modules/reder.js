@@ -1,8 +1,10 @@
-export class Render{
-    constructor(btn){
-        this.btn = btn;
-    }
 
+
+export class Render{
+    constructor(btn, fname){
+        this.btn = btn;
+        this.fname = fname
+    }
     get btnDisabled(){
         return this.btn.disabled = false;
     }
