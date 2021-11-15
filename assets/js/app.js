@@ -1,6 +1,6 @@
 import { form, fname, lname, email, phone, message, btnSubmit } from "./modules/dom.js";
 import { Form } from "./modules/form.js";
-import { Render } from "./modules/reder.js";
+import { Render } from "./modules/render.js";
 
 main();
 
