@@ -14,6 +14,9 @@ function main(){
     render.btnSubmitHover();
     render.namesInputsValidate();
     render.emailInputValidate();
+    render.phoneInputValidate();
+    render.phoneInputStyle();
+    render.messageValidate();
 
 }
 

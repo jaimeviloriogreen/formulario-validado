@@ -4,7 +4,14 @@ export class Regexp{
     }
 
     get email(){
-        return new RegExp("^([a-z-_]([0-9]+)?)+@[a-z]+\\.([a-z]{2,3})(\\.[a-z]{2,3})?$", "g");
+        return new RegExp("^([a-zA-Z-_]([0-9]+)?)+@[a-zA-Z._-]+\\.([a-zA-Z]{2,3})(\\.[a-zA-Z]{2,3})?$", "g");
     }
 
+    get phone(){
+        return new RegExp("^([1])?[-(]?([809]{3}|[829]{3}|[849]{3})[)]?[-\\s]?([0-9]{3})[-\\s]?([0-9]{4})$", "g");
+    }
+
+    get message(){
+        return new RegExp("[a-zA-ZÀ-ÿ,.:;¡!¿?]+", "gm");
+    }
 }
