@@ -2,6 +2,7 @@ import { form, fname, lname, email, phone, message, btnSubmit } from "./modules/
 import { Form } from "./modules/form.js";
 import { Render } from "./modules/render.js";
 
+
 main();
 
 function main(){
