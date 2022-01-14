@@ -23,17 +23,17 @@ function main(){
     render.restoreInputsAfterValidate();
 }
 
-
 function getDataForm(e){
     e.preventDefault();
     const form = new Form(fname.value, lname.value, email.value, phone.value, message.value);
 
     console.log(form);
 
-   
-
-    this.reset();  
     main();
+    this.reset();
+
+    const render = new Render();
+    render.showAdvise();    
 }
 
 

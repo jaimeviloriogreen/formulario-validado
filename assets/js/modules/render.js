@@ -1,5 +1,5 @@
 import { Regexp } from "./regex.js";
-import { form } from "./dom.js";
+import { form, advise, adviseSpinner, adviseText, adviceIcon } from "./dom.js";
 
 export class Render{
     constructor(){
@@ -11,7 +11,30 @@ export class Render{
         this.phone = form.phone;
         this.message = form.message;
     }
-   
+    showAdvise(){
+        let i = 0;
+    
+        const display = setInterval(() => {
+            advise.style.display = "flex";
+            adviseSpinner.style.display = "flex";
+            adviseText.style.display = "none";
+            adviceIcon.style.display = "none";
+    
+            i+=1;
+    
+            if(i  > 30){
+                adviseSpinner.style.display = "none";
+                adviseText.style.display = "flex";
+                adviceIcon.style.display = "flex";
+            }
+            if(i >= 55){
+                clearInterval(display);
+                advise.style.display = "none";
+            }
+           
+        },100);
+        
+    }
     get btnDisabled(){
         return this.btnSubmit.disabled = true;
     }
