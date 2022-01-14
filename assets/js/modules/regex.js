@@ -1,6 +1,6 @@
 export class Regexp{
     get names(){
-        return new RegExp("^[a-zA-ZÀ-ÿ]+[\\s]?[a-zA-ZÀ-ÿ]+$", "g");
+        return new RegExp("^([a-zA-ZÀ-ÿ]{2,})(\\s[a-zA-ZÀ-ÿ]+)*$", "g");
     }
 
     get email(){
@@ -12,6 +12,6 @@ export class Regexp{
     }
 
     get message(){
-        return new RegExp("[a-zA-ZÀ-ÿ,.:;¡!¿?]+", "gm");
+        return new RegExp("^([a-zA-ZÀ-ÿ,.:;¡!¿?()]{2,})(\\s[a-zA-ZÀ-ÿ,.:;¡!¿?()]+)*$", "gm");
     }
 }
