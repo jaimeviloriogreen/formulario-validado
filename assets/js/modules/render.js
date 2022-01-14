@@ -1,25 +1,65 @@
 import { Regexp } from "./regex.js";
+import { form } from "./dom.js";
 
 export class Render{
-    constructor(form){
+    constructor(){
         this.form = form;
         this.btnSubmit = form.submit;
         this.fname = form.fname
+        this.lname = form.lname;
         this.email = form.email;
         this.phone = form.phone;
         this.message = form.message;
     }
+   
     get btnDisabled(){
-        return this.btnSubmit.disabled = false;
+        return this.btnSubmit.disabled = true;
     }
     set btnDisabled(value){
         this.btnSubmit.disabled = value;
+    }
+    validateSuccess(){
+        if(this.fname.classList.contains("success") && this.lname.classList.contains("success") && this.email.classList.contains("success") && this.phone.classList.contains("success") && this.message.classList.contains("success") && this.validateInputsValue){
+            this.btnDisabled = false;
+            this.btnSubmitHover();
+        
+        }else{
+            this.btnDisabled = true;
+            this.btnSubmitHover();
+            
+        }        
+    }
+    get validateInputsValue(){
+       if(this.fname.value.length > 0 && this.lname.value.length > 0 && this.email.value.length > 0 && this.phone.value.length > 0 && this.message.value.length > 0){
+           return true;
+       }
+
+       return false;
+    }
+    restoreInputsAfterValidate(){
+        for(let input of this.form){
+            
+            if(input.name !== "submit"){
+                const successIcon = document.querySelector(`.form__icon_success_${input.name}`);
+                const errorIcon = document.querySelector(`.form__icon_error_${input.name}`);
+    
+                successIcon.style.display = "none";
+                errorIcon.style.display = "none";
+                input.classList.remove("success");
+            }
+           
+        }
+            
     }
     btnSubmitHover(){
         if(!this.btnSubmit.disabled){
             this.btnSubmit.style.cursor = "pointer";
             this.btnSubmit.classList.add("form__submit-hover");
             this.btnSubmit.classList.remove("form__submit-disabled");
+        }else{
+            this.btnSubmit.style.cursor = "not-allowed";
+            this.btnSubmit.classList.remove("form__submit-hover");
+            this.btnSubmit.classList.add("form__submit-disabled");
         }
     }
     keyExcluded(e){
@@ -57,6 +97,7 @@ export class Render{
 
                     if  ( this.keyExcluded(e) ){
                         this.stylesFormInputs(regexp.names, e.target.value, input, "text", successIcon, errorIcon);
+                        this.validateSuccess();
                     }
                     });
             };
@@ -72,6 +113,7 @@ export class Render{
 
             if  ( this.keyExcluded(e) ){
                 this.stylesFormInputs(regexp.email, e.target.value, this.email, "text", successIcon, errorIcon);
+                this.validateSuccess();
             }
         });
        
@@ -84,6 +126,7 @@ export class Render{
         this.phone.addEventListener("keyup", (e)=>{
             if  ( this.keyExcluded(e) ){ 
                 this.stylesFormInputs(regexp.phone, e.target.value, this.phone, "text", successIcon, errorIcon);
+                this.validateSuccess();
             }
         });
     }
@@ -103,8 +146,11 @@ export class Render{
         this.message.addEventListener("keyup", (e)=>{
             if  ( this.keyExcluded(e) ){
                 this.stylesFormInputs(regexp.message, e.target.value, this.message, "textarea", successIcon, errorIcon);
+                this.validateSuccess();
             }
         });
+
+        
     }
     
 }
