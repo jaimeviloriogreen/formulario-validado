@@ -8,7 +8,7 @@ export class Regexp{
     }
 
     get phone(){
-        return new RegExp("^([1])?[-(]?(809|829|849)[)]?[-\s]?([0-9]{3})[-\s]?([0-9]{4})$", "g");
+        return new RegExp("^([1])?[-(]?(809|829|849)[)]?[-\\s]?([0-9]{3})[-\\s]?([0-9]{4})$", "g");
     }
 
     get message(){
