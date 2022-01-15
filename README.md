@@ -19,6 +19,7 @@ Este proyecto tiene como finalidad validar un formulario utilizando, principalme
 1. La validación del los campos tipo text exige un mínimo de dos caracteres de palabra.
 2. El campo tipo textarea, también exige un mínimo de dos caracteres de palabra y los siguientes caracteres: ==.:;¡!¿?()==.
 3. El campo asignado para validar el teléfono, solo aplica para el código de área de mi país (República Dominicana), los cuales son: ==809, 829 y 849==.
+4. Por consola se manda un objeto Form con todos los datos recolectados por el formulario.
 
 
 
