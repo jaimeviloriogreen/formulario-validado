@@ -9,5 +9,8 @@ const advise = document.querySelector(".advise");
 const adviseSpinner = document.querySelector(".advise__spinner");
 const adviseText = document.querySelector(".advise__text");
 const adviceIcon = document.querySelector(".advise__icon");
+const overlay = document.querySelector(".overlay");
 
-export{ form, fname, lname, email, phone, message, btnSubmit, advise, adviseSpinner, adviseText, adviceIcon }
+
+
+export{ form, fname, lname, email, phone, message, btnSubmit, advise, adviseSpinner, adviseText, adviceIcon, overlay }

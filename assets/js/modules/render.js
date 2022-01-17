@@ -1,5 +1,5 @@
 import { Regexp } from "./regex.js";
-import { form, advise, adviseSpinner, adviseText, adviceIcon } from "./dom.js";
+import { form, advise, adviseSpinner, adviseText, adviceIcon, overlay } from "./dom.js";
 
 export class Render{
     constructor(){
@@ -15,6 +15,7 @@ export class Render{
         let i = 0;
     
         const display = setInterval(() => {
+            overlay.style.display = "initial";
             advise.style.display = "flex";
             adviseSpinner.style.display = "flex";
             adviseText.style.display = "none";
@@ -27,12 +28,13 @@ export class Render{
                 adviseText.style.display = "flex";
                 adviceIcon.style.display = "flex";
             }
-            if(i >= 55){
+            if(i >= 45){
                 clearInterval(display);
+                overlay.style.display = "none";
                 advise.style.display = "none";
             }
            
-        },100);
+        },150);
         
     }
     get btnDisabled(){
