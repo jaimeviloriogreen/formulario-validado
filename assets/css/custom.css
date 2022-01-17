@@ -173,7 +173,7 @@ body{
     font-weight: 700;
     font-size: 1rem;
     color: var(--color1);
-    transition: background-color .3s ease;
+    transition: background-color 300ms ease;
     cursor:not-allowed;
 }
 .form__submit-disabled{

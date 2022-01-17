@@ -12,7 +12,6 @@ function main(){
     // Instances
     const render = new Render();
     render.btnDisabled = true;
-    
     render.btnSubmitHover();
     render.namesInputsValidate();
     render.emailInputValidate();
@@ -27,13 +26,17 @@ function getDataForm(e){
     e.preventDefault();
     const form = new Form(fname.value, lname.value, email.value, phone.value, message.value);
 
-    console.log(form);
-
-    main();
-    this.reset();
-
     const render = new Render();
+    render.btnDisabled = true;
+    render.btnSubmitHover();
+    render.restoreInputsAfterValidate();
     render.showAdvise();    
+    
+    
+    this.reset();
+    
+    console.log(form);
+    
 }
 
 
