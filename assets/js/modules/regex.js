@@ -4,7 +4,7 @@ export class Regexp{
     }
 
     get email(){
-        return new RegExp("^([a-zA-Z-_]([0-9]+)?)+@[a-zA-Z._-]+\\.([a-zA-Z]{2,3})(\\.[a-zA-Z]{2,3})?$", "g");
+        return new RegExp("^([a-zA-Z-_]([0-9]+)?)+@[a-zA-Z_-]+\\.{1}([a-zA-Z]{2,3})(\\.{1}[a-zA-Z]{2,3})?$", "g");
     }
 
     get phone(){
